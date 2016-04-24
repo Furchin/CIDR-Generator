@@ -1,12 +1,12 @@
 {
   "name": "cidr-generator",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "./lib/index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Furchin/CIDR-generator"
+    "url": "https://github.com/Furchin/cidr-generator"
   },
   "scripts": {
     "start": "node lib/index.js",
