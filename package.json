@@ -1,0 +1,23 @@
+{
+  "name": "cidr-generator",
+  "private": false,
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "./lib/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Furchin/CIDR-generator"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "./node_modules/.bin/jasmine-node test"
+  },
+  "dependencies": {
+    "ip": "^1.1.2",
+    "merge-cidrs": "^1.0.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
