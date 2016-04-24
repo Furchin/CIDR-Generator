@@ -1,4 +1,4 @@
-# CIDR-Generator
+# cidr-generator
 
 Given a list of IP addresses to blacklist and a maximum number of CIDR blocks to use, return a set of CIDR blocks
 covering the blacklist with minimal collateral damage (non-blacklisted IP addresses which fall into the CIDR blocks returned).
@@ -10,22 +10,25 @@ In future versions of this package the CIDR block generation logic will avoid th
 
 Install with:
 
-    npm install CIDR-Generator
+    npm install cidr-generator
 
 ## Usage
 ### Parameters
 `blacklist` - An _array_ of IPv4-formatted IP address _strings_ which will be covered by the resulting CIDR blocks.
 `whitelist` - An _array_ of IPv4-formatted IP address _strings_ which should not be covered by the CIDR blocks.
 `maxBlocks` - The maximum number of CIDR blocks to return.
+
 ### Return Value
 An _array_ of objects whose length will be `maxBlocks` or less. Each object will contain the following fields:
+
 `CIDR` - a _string_ representing a CIDR block (eg, `127.0.0.0/30`)
 `blacklistedIPs` - the _number_ of IP addresses from the blacklist covered by the CIDR block.
 `whitelistedIPs` - the _number_ of IP addresses from the whitelist covered by the CIDR block.
 `collateralDamage` - the _number_ of IP addresses in the CIDR block that are *not* in the blacklist. (This quantity includes IP addresses appearing on the whitelist.)
+
 ### Examples
 ```js
-var generator = require('CIDR-Generator');
+var generator = require('cidr-generator');
 
 // Example where you have a set of IPs to blacklist using only a single CIDR block:
 var ips = [
