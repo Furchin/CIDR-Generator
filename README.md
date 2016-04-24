@@ -1,4 +1,6 @@
 # cidr-generator
+[![Build Status via Travis CI](https://travis-ci.org/Furchin/CIDR-Generator.svg?branch=master)](https://travis-ci.org/Furchin/CIDR-Generator)
+[![NPM version](http://img.shields.io/npm/v/cidr-generator.svg)](https://www.npmjs.org/package/cidr-generator)
 
 Given a list of IP addresses to blacklist and a maximum number of CIDR blocks to use, return a set of CIDR blocks
 covering the blacklist with minimal collateral damage (non-blacklisted IP addresses which fall into the CIDR blocks returned).
