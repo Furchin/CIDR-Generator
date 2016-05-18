@@ -17,15 +17,20 @@ Install with:
 ## Usage
 ### Parameters
 `blacklist` - An _array_ of IPv4-formatted IP address _strings_ which will be covered by the resulting CIDR blocks.
+
 `whitelist` - An _array_ of IPv4-formatted IP address _strings_ which should not be covered by the CIDR blocks.
+
 `maxBlocks` - The maximum number of CIDR blocks to return.
 
 ### Return Value
 An _array_ of objects whose length will be `maxBlocks` or less. Each object will contain the following fields:
 
 `CIDR` - a _string_ representing a CIDR block (eg, `127.0.0.0/30`)
+
 `blacklistedIPs` - the _number_ of IP addresses from the blacklist covered by the CIDR block.
+
 `whitelistedIPs` - the _number_ of IP addresses from the whitelist covered by the CIDR block.
+
 `collateralDamage` - the _number_ of IP addresses in the CIDR block that are *not* in the blacklist. (This quantity includes IP addresses appearing on the whitelist.)
 
 ### Examples
